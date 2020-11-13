@@ -1211,7 +1211,7 @@ Proof. reflexivity. Qed.
     type.  Iterating over [cnat] itself is usually problematic.) *)
 
 Definition exp (n m : cnat) : cnat :=
-  fun (X : Type) (f : X -> X) (x : X) => n X f (m X f x).
+  fun(X: Type) => m (X -> X) (n X).
 
 Example exp_1 : exp two two = plus two two.
 Proof. reflexivity. Qed.
